@@ -6,7 +6,6 @@ var isTokenValid = (token) => {
 var connectedUsers = 0;
 
 module.exports = (server) => {
-    console.log('io module');
     var io = require('socket.io')(server);
 
     // middleware to verify on Connecting and Reconnecting
@@ -19,7 +18,6 @@ module.exports = (server) => {
     });
 
     io.on('connection', function(socket) {
-        console.log('a user connected');
         var addedUser = false;
 
         // when the client emits 'new message', this listens and executes
@@ -33,7 +31,6 @@ module.exports = (server) => {
 
         // when the client emits 'add user', this listens and executes
         socket.on('add user', function(username) {
-            console.log('a user added');
             if (addedUser) return;
 
             // we store the username in the socket session for this client
@@ -66,7 +63,6 @@ module.exports = (server) => {
 
         // when the user disconnects.. perform this
         socket.on('disconnect', function() {
-            console.log('a user disconnected');
             if (addedUser) {
                 --connectedUsers;
 

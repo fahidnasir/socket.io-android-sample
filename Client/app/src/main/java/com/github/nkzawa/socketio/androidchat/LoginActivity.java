@@ -99,16 +99,16 @@ public class LoginActivity extends Activity {
         public void call(Object... args) {
             JSONObject data = (JSONObject) args[0];
 
-            int numUsers;
+            int connectedUsers;
             try {
-                numUsers = data.getInt("numUsers");
+                connectedUsers = data.getInt("connectedUsers");
             } catch (JSONException e) {
                 return;
             }
 
             Intent intent = new Intent();
             intent.putExtra("username", mUsername);
-            intent.putExtra("numUsers", numUsers);
+            intent.putExtra("connectedUsers", connectedUsers);
             setResult(RESULT_OK, intent);
             finish();
         }

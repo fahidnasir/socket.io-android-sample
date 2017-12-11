@@ -181,10 +181,10 @@ public class MainFragment extends Fragment {
         }
 
         mUsername = data.getStringExtra("username");
-        int numUsers = data.getIntExtra("numUsers", 1);
+        int connectedUsers = data.getIntExtra("connectedUsers", 1);
 
         addLog(getResources().getString(R.string.message_welcome));
-        addParticipantsLog(numUsers);
+        addParticipantsLog(connectedUsers);
     }
 
     @Override
@@ -216,8 +216,8 @@ public class MainFragment extends Fragment {
         scrollToBottom();
     }
 
-    private void addParticipantsLog(int numUsers) {
-        addLog(getResources().getQuantityString(R.plurals.message_participants, numUsers, numUsers));
+    private void addParticipantsLog(int connectedUsers) {
+        addLog(getResources().getQuantityString(R.plurals.message_participants, connectedUsers, connectedUsers));
     }
 
     private void addMessage(String username, String message) {
@@ -359,17 +359,17 @@ public class MainFragment extends Fragment {
                 public void run() {
                     JSONObject data = (JSONObject) args[0];
                     String username;
-                    int numUsers;
+                    int connectedUsers;
                     try {
                         username = data.getString("username");
-                        numUsers = data.getInt("numUsers");
+                        connectedUsers = data.getInt("connectedUsers");
                     } catch (JSONException e) {
                         Log.e(TAG, e.getMessage());
                         return;
                     }
 
                     addLog(getResources().getString(R.string.message_user_joined, username));
-                    addParticipantsLog(numUsers);
+                    addParticipantsLog(connectedUsers);
                 }
             });
         }
@@ -383,17 +383,17 @@ public class MainFragment extends Fragment {
                 public void run() {
                     JSONObject data = (JSONObject) args[0];
                     String username;
-                    int numUsers;
+                    int connectedUsers;
                     try {
                         username = data.getString("username");
-                        numUsers = data.getInt("numUsers");
+                        connectedUsers = data.getInt("connectedUsers");
                     } catch (JSONException e) {
                         Log.e(TAG, e.getMessage());
                         return;
                     }
 
                     addLog(getResources().getString(R.string.message_user_left, username));
-                    addParticipantsLog(numUsers);
+                    addParticipantsLog(connectedUsers);
                     removeTyping(username);
                 }
             });

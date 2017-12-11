@@ -4,12 +4,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3894331e-59f5-4a34-8254-db4e3ccf4ea9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/github/nkzawa/socketio/androidchat/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/nkzawa/socketio/androidchat/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/github/nkzawa/socketio/androidchat/MainFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/nkzawa/socketio/androidchat/MainFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/server/scripts/socketio.js" afterPath="$PROJECT_DIR$/../Server/src/server/scripts/socketio.js" />
-    </list>
+    <list default="true" id="3894331e-59f5-4a34-8254-db4e3ccf4ea9" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2311,7 +2306,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
